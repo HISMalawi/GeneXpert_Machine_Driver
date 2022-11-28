@@ -91,7 +91,7 @@ function processResults(arr) {
 							urls.push(uri);
 							
 						}
-				}else if(assy == "SARS COV2 19" || assy == "2SARS COV 19" || assy == "SARS COV 129" ||  assy == "SARS2 COV 19" || assy == "S2ARS COV 19" || assy == "SAR2S COV 19" || assy == "SARS CO2V 19" || assy == "SARS COV 19" || assy == "SARS C2OV 19" || assy == "SARS COV 219" || assy == "SA2RS COV 19" || assy == "SARS 2COV 19")
+				}else if(assy == "SARS COV 19" || assy == "COV 2" || assy == "COV-2 2" || assy == "SARS COV2 19" || assy == "2SARS COV 19" || assy == "SARS COV 129" ||  assy == "SARS2 COV 19" || assy == "S2ARS COV 19" || assy == "SAR2S COV 19" || assy == "SARS CO2V 19" || assy == "SARS COV 19" || assy == "SARS C2OV 19" || assy == "SARS COV 219" || assy == "SA2RS COV 19" || assy == "SARS 2COV 19")
 				{
 					if (segments[2] && segments[8] == "F" && (segments[1] == "1" || segments[1] == "12")) {		
 						var rst = segments[3].split("^")[0].replace(/\d+/g, "");		
@@ -119,7 +119,7 @@ function processResults(arr) {
                                                 }
 						var link = settings.lisPath;
 						link = link.replace(/\#\{SPECIMEN_ID\}/, sampleId);
-                                                var uri = link.replace(/\#\{MEASURE_ID\}/, mapping["COV-2"]);
+                                                var uri = link.replace(/\#\{MEASURE_ID\}/, mapping["Viral Load"]);
                                                 uri = uri.replace(/\#\{RESULT\}/, rst);
                                                 urls.push(uri);
 
